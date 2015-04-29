@@ -1,2 +1,2 @@
 # encrypter/decrypter
-by Caesar and Vigeneres methods in python 2.7
+by Caesa'r and Vigenere's methods in python 2.7
