@@ -1,3 +1,4 @@
 # encrypter/decrypter
-by Caesa'r and Vigenere's methods in python 2.7
-Just run 'crypt.py' for usage
+by Caesar's and Vigenere's methods in python 2.7 
+
+Just run `crypt.py` for usage
