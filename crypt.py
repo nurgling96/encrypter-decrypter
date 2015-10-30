@@ -15,7 +15,7 @@ class Caesar:
                 result += new_symbol
             if i not in alphabet:
                 result += i
-        print("Cipher: {}".format(result))
+        print("Ciphertext: {}".format(result))
         return result
 
     def decryption(self, cipher, key):
@@ -27,7 +27,7 @@ class Caesar:
                 result += new_symbol
             if i not in alphabet:
                 result += i
-        print("Message is: {}".format(result))
+        print("Plaintext message is: {}".format(result))
         return result               
 
 class Vigenere:
@@ -71,17 +71,17 @@ For Caesar print "c" or "v" for Vigenere: ')
 
     if way_of_crypt == "c":
         print("Caesar cipher")
-        choise= raw_input('Type "e" for encrypt or "d" for decrypt: ')
+        choice= raw_input('Type "e" for encrypt or "d" for decrypt: ')
         print("")
 
-        if choise == "e":
+        if choice == "e":
             word = raw_input("Enter a message: ")
             key = int(input("Enter a key (any number): "))
             c = Caesar()
             c.encryption(word, key)
             
 
-        if choise == "d":
+        if choice == "d":
             cipher = raw_input("Enter a cipher: ")
             key = int(input("Enter a key: "))
             c = Caesar()
@@ -90,28 +90,28 @@ For Caesar print "c" or "v" for Vigenere: ')
 
     if way_of_crypt == "v":
         print("Vigenere cipher")
-        choise= raw_input('Type "e" for encrypt or "d" for decrypt: ')
+        choice= raw_input('Type "e" for encrypt or "d" for decrypt: ')
         print("")
 
-        if choise == "e":
+        if choice == "e":
             word = raw_input("Enter a message: ")
             key = raw_input("Enter a key (any word): ")
             v = Vigenere()
-            v.encryption(word, key)
-            print("Cipher is: {}".format(v.encryption(word, key)))
+            ciphertext = v.encryption(word, key)
+            print("Ciphertext is: {}".format(ciphertext))
 
-        if choise== "d":
+        if choice== "d":
             cipher = raw_input("Enter a cipher: ")
             key = raw_input("Enter a key: ")
             v = Vigenere()
-            v.decryption(cipher, key)
-            print("Message is: {}".format(v.decryption(cipher, key)))
+            plaintext = v.decryption(cipher, key)
+            print("Plaintext message is: {}".format(plaintext))
 
     print ('')
     response = raw_input("Do you want to continue? (y/n): ")
-    if response == 'n': # Exit the program
+    if response == "y" or response == "Y":
+        pass
+    else: # Exit the program
         print ('')
         print('Goodbye')
         loop = False
-    if response == "y":
-        pass
