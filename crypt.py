@@ -100,7 +100,7 @@ For Caesar print "c" or "v" for Vigenere: ')
             ciphertext = v.encryption(word, key)
             print("Ciphertext is: {}".format(ciphertext))
 
-        if choice== "d":
+        if choice == "d":
             cipher = raw_input("Enter a cipher: ")
             key = raw_input("Enter a key: ")
             v = Vigenere()
